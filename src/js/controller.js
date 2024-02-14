@@ -7,7 +7,6 @@ import bookmarksView from './views/bookmarksView.js';
 import addRecipeView from './views/addRecipeView.js';
 import * as config from './config.js';
 
-// import icons from '../img/icons.svg'; //Parcel1
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import resultsView from './views/resultsView.js';
@@ -16,10 +15,6 @@ import recipeView from './views/recipeView.js';
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-
-// if (module.hot) {
-//   module.hot.accept();
-// }
 
 const controlRecipes = async function () {
   try {
@@ -144,5 +139,6 @@ const init = function () {
   RecipeView.addHandlerUpdateServings(controlServings);
   RecipeView.addHandlerAddBookmark(controlAddBookmark);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  console.log('Hi everyone');
 };
 init();

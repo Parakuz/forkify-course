@@ -1,6 +1,5 @@
 import { async } from 'regenerator-runtime';
 import * as config from './config';
-// import { getJSON, sendJSON } from './helpers';
 import { AJAX } from './helpers';
 export const state = {
   recipe: {},
@@ -50,8 +49,6 @@ export const loadRecipe = async function (id) {
 
     console.log(state.bookmarks);
   } catch (err) {
-    // Temp error handling
-    // console.error(`${err} 💥`);
     throw err;
   }
 };
@@ -75,12 +72,10 @@ export const loadSearchResults = async function (query) {
     });
     console.log(state.search.result);
     state.search.page = 1;
-    // console.log(state.search.result);
   } catch (err) {
     throw err;
   }
 };
-// loadSearchResults('pizza');
 
 export const getSearchResultsPage = function (page = state.search.page) {
   state.search.page = page;
@@ -132,7 +127,6 @@ const init = function () {
   }
 };
 init();
-// console.log(state.bookmarks);
 
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');

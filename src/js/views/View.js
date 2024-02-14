@@ -35,7 +35,7 @@ export default class View {
 
     newElements.forEach((newEl, i) => {
       const curEl = curElements[i];
-      console.log(curEl, newEl.isEqualNode(curEl));
+      // console.log(curEl, newEl.isEqualNode(curEl));
 
       // Updates changed TEXT
       if (
@@ -47,7 +47,7 @@ export default class View {
 
       // Updates changed ATTRIBUES
       if (!newEl.isEqualNode(curEl)) {
-        console.log(Array.from(newEl.attributes));
+        // console.log(Array.from(newEl.attributes));
         Array.from(newEl.attributes).forEach(attr =>
           curEl.setAttribute(attr.name, attr.value)
         );

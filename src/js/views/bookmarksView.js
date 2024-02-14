@@ -15,7 +15,7 @@ class BookmarksView extends View {
     // console.log(this._data);
     return this._data
       .map(bookmark => {
-        console.log(bookmark);
+        // console.log(bookmark);
         return previewView.render(bookmark, false);
       })
       .join('');
